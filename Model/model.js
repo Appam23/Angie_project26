@@ -5,7 +5,7 @@ const siteData = {
     tagline: 'Guiding Families Through Aging With Clarity & Compassion',
     npi: '1750929980',
     payment: 'Private-Pay | No Insurance Needed',
-    phone: '385-414-6113',
+    phone: '801-634-0852',
     email: 'angiesumsion1@gmail.com',
     location: 'Salt Lake • Utah • Davis Counties',
     accepting: 'Now Accepting New Families'
