@@ -1,0 +1,102 @@
+<%- include('partials/header', { data }) %>
+
+<header class="hero">
+  <div class="container hero-content">
+    <img src="/Images/IMG_8062.jpeg" alt="Angie Sumsion" class="hero-image" />
+    <div class="hero-text">
+      <h1><%= data.profile.name %></h1>
+      <h2><%= data.profile.title %></h2>
+      <p><%= data.profile.tagline %></p>
+      <div class="hero-actions">
+        <span class="badge"><%= data.profile.accepting %></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section>
+    <h3>Who I Help</h3>
+    <ul>
+      <% data.whoIHelp.forEach(item => { %>
+        <li><%= item %></li>
+      <% }) %>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Services</h3>
+    <ul>
+      <% data.services.forEach(service => { %>
+        <li><%= service %></li>
+      <% }) %>
+    </ul>
+  </section>
+
+  <section class="two-col">
+    <div>
+      <h3>I Do</h3>
+      <ul>
+        <% data.doList.forEach(item => { %>
+          <li><%= item %></li>
+        <% }) %>
+      </ul>
+    </div>
+    <div>
+      <h3>I Don't</h3>
+      <ul>
+        <% data.dontList.forEach(item => { %>
+          <li><%= item %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h3>Care Packages</h3>
+    <div class="packages">
+      <% data.packages.forEach(pkg => { %>
+        <article class="card <%= pkg.popular ? 'popular' : '' %>">
+          <h4><%= pkg.name %></h4>
+          <p class="price"><%= pkg.price %></p>
+          <ul>
+            <% pkg.details.forEach(detail => { %>
+              <li><%= detail %></li>
+            <% }) %>
+          </ul>
+        </article>
+      <% }) %>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h3>Contact</h3>
+    <p><strong>Phone:</strong> <%= data.profile.phone %></p>
+    <p><strong>Email:</strong> <%= data.profile.email %></p>
+    <p><strong>Location:</strong> <%= data.profile.location %></p>
+    <p><strong>NPI:</strong> <%= data.profile.npi %></p>
+    <p><strong>Payment:</strong> <%= data.profile.payment %></p>
+  </section>
+
+  <section class="cta">
+    <h3><%= data.cta.title %></h3>
+    <p><%= data.cta.text %></p>
+    <p><strong>Call:</strong> <%= data.profile.phone %></p>
+    <p><strong>Email:</strong> <%= data.profile.email %> | <%= data.cta.responseTime %></p>
+  </section>
+</main>
+
+<a
+  href="https://wa.me/<%= data.profile.phone %>?text=Hi%20Angie%2C%20I%20would%20like%20to%20chat%20about%20care%20coordination%20support."
+  class="floating-chat"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <span class="floating-chat-icon-wrap">
+    <img src="/Images/whatsapp_logo_icon.webp" alt="WhatsApp" class="floating-chat-icon" />
+  </span>
+  <span class="floating-chat-text">Chat Now</span>
+</a>
+
+<%- include('partials/footer', { data }) %>
