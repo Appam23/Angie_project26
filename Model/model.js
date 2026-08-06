@@ -6,6 +6,7 @@ const siteData = {
     npi: '1750929980',
     payment: 'Private-Pay | No Insurance Needed',
     phone: '801-634-0852',
+    whatsappPhone: '8016340852',
     email: 'angiesumsion1@gmail.com',
     location: 'Salt Lake • Utah • Davis Counties',
     accepting: 'Now Accepting New Families'
