@@ -1,7 +1,7 @@
 :root{
   --green:#1f5b4b;
   --dark:#153d33;
-  --bg:#f6faf8;
+  --bg:#f8f1e3;
   --white:#fff;
   --text:#1b1b1b;
   --muted:#5f6f6a;
@@ -11,7 +11,7 @@
 body{
   margin:0;
   font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
-  background:linear-gradient(180deg,#f8fcfa 0%,var(--bg) 100%);
+  background:linear-gradient(180deg,#fffaf0 0%,#f9f1df 52%,var(--bg) 100%);
   color:var(--text);
   line-height:1.6;
 }
